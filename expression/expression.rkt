@@ -4,7 +4,7 @@
 ;simple arthimatic operation
 ;simple expression that operate on numbers
 
-
+;primitve operation opernads 
 (+ 7 8) ;expression --->gives value 
 ;rackets evaluates expression to produce values
 
@@ -31,3 +31,7 @@
 
 ;example inexact number
 (sqrt 2)
+
+
+;how racket elvate expression in values
+
