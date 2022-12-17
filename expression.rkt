@@ -2,6 +2,7 @@
 #lang racket
 
 ;simple arthimatic operation
+;simple expression that operate on numbers
 
 
 (+ 7 8) ;expression --->gives value 
@@ -20,3 +21,13 @@
 ;answer
 
 (sqrt (+ (* 3 3) (* 4 4))) ;expression for solving pythogreous equation
+
+
+;another way to do
+
+(sqrt (+ (sqr 3) (sqr 4)))
+
+;irrational number ----> that number cant finished
+
+;example inexact number
+(sqrt 2)
