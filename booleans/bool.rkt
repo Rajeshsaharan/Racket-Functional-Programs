@@ -24,3 +24,6 @@ false
 
 (if (< (image-width IMAGE1) (image-width IMAGE2)) "IMAGE2 is wide" "IMAGE1 is wide")
 ;(if  (question expression that provides true or false) "true value"  "false value")
+
+;evalute if else expression
+
