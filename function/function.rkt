@@ -17,3 +17,10 @@
 
 (myfunc MY_SHAPE) ;one way
 (myfunc (text "please dont do this again" 39 "purple"))
+
+
+;type annoatation
+
+(define (mytest? n) true) ;for bool values
+
+;;to check type safty we can use ? so if we use ? it means it must return true or false by passing to boolean?

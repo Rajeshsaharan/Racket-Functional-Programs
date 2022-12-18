@@ -27,3 +27,8 @@ false
 
 ;evalute if else expression
 
+
+
+;nested if-else
+
+(if (> (image-height IMAGE1) (image-width IMAGE1)) "tall" (if(= (image-height IMAGE1) (image-width IMAGE1)) "square" "wide"))
