@@ -54,7 +54,7 @@
   ;wrting condition keyword is very !important
     (cond    [(false? ec) (text "exam not started" 24 "red") ] ;for false atomic-distinct
         [(and (number? ec) (<= 0 ec) (< ec 10)) (text ec 24 "red")]                               ;for Natural[1-10] interval atomic-non-distinct
-        [(true? ec) (text "exam started" 24 "green")] ; for true atomic distinct 
+        [(equal? ec) (text "exam started" 24 "green")] ; for true atomic distinct 
         [else (text "exam completed" 24 "yellow")] ; for atomic-distinct string "complete"
     )
 )
