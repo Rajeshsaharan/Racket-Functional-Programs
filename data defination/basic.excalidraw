@@ -1,0 +1,46 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "iF3zQ4YY6K3qKqAuxtjmT",
+      "type": "text",
+      "x": 302,
+      "y": 182.5,
+      "width": 927,
+      "height": 72,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1262251286,
+      "version": 247,
+      "versionNonce": 476156630,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1671363848216,
+      "link": null,
+      "locked": false,
+      "text": "Atomic non-distinct : - means two value (can be two string , bool , two number)\natomic-distinct : - means only single value true , any string\none-of :- value more than two (itemazation , enumaration)",
+      "fontSize": 20,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 67,
+      "containerId": null,
+      "originalText": "Atomic non-distinct : - means two value (can be two string , bool , two number)\natomic-distinct : - means only single value true , any string\none-of :- value more than two (itemazation , enumaration)"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

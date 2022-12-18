@@ -1,5 +1,6 @@
 #lang racket
 
+;example of enumaration one of
 
 ;data defination describe
 

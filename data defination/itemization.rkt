@@ -1,5 +1,5 @@
 #lang racket
-
+(require 2htdp/image)
 ;design a data defination for starting exam
 ;within 3 catagory
 
@@ -32,9 +32,35 @@
 
 (define (fn-for-count-exam ec)
         [(false? ec) (...)] ;for false atomic-distinct
-        [((and (Number? ec)(<= 0 x) ;for Natural[1-10] interval atomic-non-distinct
-     (< x 10))) (...x)] 
+        [((and (Number? ec)(<= 0 ec) ;for Natural[1-10] interval atomic-non-distinct
+     (< ec 10))) (...ec)] 
         [(true? ec) (...)] ; for true atomic distinct 
         [else (...)] ; for atomic-distinct string "complete"
 
 )
+
+;define a function for generate image from examCountedown
+
+;signature examCount-> Image
+; purpose : - generate image according to countdown
+; stub
+;(define (examCount->Image ec) (text "stub_test" 24 "red")) ; stub
+
+;template from examCount data defination
+
+;code body
+
+(define (examCount->Image ec) ;naming convention for writing function name to according to signature of function
+
+        [(false? ec) (text "exam not started" 24 "red") ] ;for false atomic-distinct
+        [((and (Number? ec)(<= 0 x) ;for Natural[1-10] interval atomic-non-distinct
+     (< x 10))) (text ec 24 "red")] 
+        [(true? ec) (text "exam started" 24 "green")] ; for true atomic distinct 
+        [else (text "exam completed" 24 "yellow")] ; for atomic-distinct string "complete"
+
+)
+
+(examCount->Image false)
+(examCount->Image 2)
+(examCount->Image true)
+(examCount->Image "complete")
