@@ -31,12 +31,12 @@
 ;template for itemization
 
 (define (fn-for-count-exam ec)
-        [(false? ec) (...)] ;for false atomic-distinct
+    (cond    [(false? ec) (...)] ;for false atomic-distinct
         [((and (Number? ec)(<= 0 ec) ;for Natural[1-10] interval atomic-non-distinct
      (< ec 10))) (...ec)] 
         [(true? ec) (...)] ; for true atomic distinct 
         [else (...)] ; for atomic-distinct string "complete"
-
+    )
 )
 
 ;define a function for generate image from examCountedown
@@ -51,13 +51,12 @@
 ;code body
 
 (define (examCount->Image ec) ;naming convention for writing function name to according to signature of function
-
-        [(false? ec) (text "exam not started" 24 "red") ] ;for false atomic-distinct
-        [((and (Number? ec)(<= 0 x) ;for Natural[1-10] interval atomic-non-distinct
-     (< x 10))) (text ec 24 "red")] 
+  ;wrting condition keyword is very !important
+    (cond    [(false? ec) (text "exam not started" 24 "red") ] ;for false atomic-distinct
+        [(and (number? ec) (<= 0 ec) (< ec 10)) (text ec 24 "red")]                               ;for Natural[1-10] interval atomic-non-distinct
         [(true? ec) (text "exam started" 24 "green")] ; for true atomic distinct 
         [else (text "exam completed" 24 "yellow")] ; for atomic-distinct string "complete"
-
+    )
 )
 
 (examCount->Image false)
