@@ -27,13 +27,15 @@
 
 
 ;---------------------------
- ;function
+;function
 
 ;main function using big-bang
 ;Cat-> Cat
 ;; start the program with main function
-(define (main c)
-  (big-bang c (on-tick move-catX) (on-draw draw-cat)))
+(define (main c)                  ;cat
+  (big-bang c (on-tick move-catX) ; Cat-> Cat
+              (on-draw draw-cat) ; Cat -> Image
+              (on-key handle-key))) ; Cat  key-event-> Cat 
 
 
 ;WISH LIST
@@ -63,3 +65,32 @@
 
 ; test
 (check-expect (draw-cat 4) (place-image CAT_IMAGE 4 CENTER_Y BACKGROUND))
+
+;handle-key
+;signature ; Cat key-event -> Cat
+; purpose : to restart cat while pressing space key
+
+#;
+(define (handle-key c key-event) 0) ;stub
+
+;template for keyevent and Cat
+
+
+#;
+(define (handle-key c key-event) ; for larger enumaration specify particular case in cond question and answer and more case will be handled by else statement
+           [(key? key-event " ") (...c)]) ; c is only applicable here in answer so atomic-nod-distinct : Number rules used           [else (...c)])
+
+;code-block
+(define (handle-key c key-event)
+                     (cond [(key=? key-event " ") 0]
+                      [else c] ; while pressing another key expect space
+                      ))
+
+
+
+
+
+;test
+(check-expect (handle-key 10 "a") 10)
+(check-expect (handle-key 20 " ") 0)
+
