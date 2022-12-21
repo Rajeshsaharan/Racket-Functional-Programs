@@ -4,12 +4,13 @@
 ;;Rajasthan     || "rajasthan" ; represnt by string 
 ;; Bangolre     || " Banglore"
 ;; 
-;type comment
+;type comment ; whenever the data is unlimited size(arbitary than we use self-refrence)
+; we use self refrence if at least one base & on self refrence data case is avilable
 ;ListofString is one of :-
 ; - empty
 ; - (cons string ListOfString) ; a self refrence
 
-;example
+;example-> should be all base case 
 (define LOS1 empty)
 (define LOS1 (cons "rajasthan" (cons "banglore" empty)))
 
@@ -27,6 +28,7 @@
 ; -one of : 2 case
 ; -atomic-distinc : empty
 ; - compound data rules used cons 
+; - self-refrence (rest listOfString) is listOfString 
 
 
 ;design a function that return true if listOfstrinf contains "rajasthan"
