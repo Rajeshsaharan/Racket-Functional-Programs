@@ -4,7 +4,7 @@
 ;PROBLEM :_ design a defination to reprsent hockey players including both firstname and last name
 
 
-(define player (firstName lastName))
+(define-struct player (firstName lastName))
 ;type comment : - Player is (make-Player string string)
 ;interp. (make-Player)  in a hockey player with firstName is First Name of Player 
 ;                                                - lastName is last Name of player
