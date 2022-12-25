@@ -25,3 +25,28 @@
 ;; atomic-distinct --0
 ;; compound : - (add1 natural)
 ;; self refrence 
+
+
+; Natural -> Natrural
+;consume naruralnt type data and produce natural 
+;; 
+#;
+(define (sum n) 1) ; stub
+
+(check-expect (sum 1) 1)
+(check-expect (sum 2) 3)
+(check-expect (sum 0) 0)
+(check-expect (sum 3) 6) ; 3 + 2 +1 + 0 
+
+;<template from natural stub>
+
+(define (sum n)
+        (cond [(zero? n) 0]
+              [else (+ n (sum (sub1 n)))] ; base case + recursion
+        )
+)
+
+
+; ;helper function
+
+; (define (zero? n) (= 0 n)) ; already defined in required library
