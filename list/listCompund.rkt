@@ -20,7 +20,7 @@
 ; design a list corrspending user
 ; ListOfUser contains is one of-
 ; -empty (base case)
-; - a list of ListOfUser(self-refrence)
+; - a list of ListOfUser(self-refrence) (cons user listofUser)
 ;interp. a list of user(struct) type aribratry size
 
 ;example
