@@ -47,7 +47,7 @@
 
 ;;function
 ;; Element -> integar
-;; listofElemnt -> ???
+;; listofElemnt -> integar
 ;; prodcue the sum of all data and its subs
 (check-expects (sum-element F1) 1)
 (check-expects (sum-loe empty) 0)
@@ -78,4 +78,42 @@
             (cond [(empty? loe) 0]
                   [else (+ (sum-element (first loe)) (sum-loe (rest-loe)))]
             )
+)
+
+
+;; design a function that produce the list of elements and all sub type
+;; Element -> listofNames
+;; listofElement -> ??
+
+;; produce list of element 
+;;  
+(check-expect (produce-list-from-loe empty) empty) ; base case
+(check-expect (produce-list-from-element F1) (list "F1"))
+(check-expect (produce-list-from-element F2) (list "F2"))
+(check-expect (produce-list-from-element F3) (list "F3"))
+(check-expect (produce-list-from-element D1) (list "D1" "F1" "F2"))
+(check-expect (produce-list-from-element D2) (list "D2" "F3"))
+(check-expect (produce-list-from-element R1) (list "R1" "D1" "F1" "F2" "D2" "F3"))
+
+
+
+
+
+
+
+
+;(define (produce-list-from-element e) empty)
+;(define (produce-list-from-loe) loe) empty)
+
+
+(define (produce-list-from-element e)
+      (cons (element-name e) (produce-list-from-loe (element-subs e)))
+
+)
+
+(define (produce-list-from-loe loe)
+            (cond [(empty? loe) empty]
+                  [else (append (produce-list-from-element (first loe)) (produce-list-from-loe (rest loe)))]
+            )
+
 )
