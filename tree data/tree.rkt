@@ -117,3 +117,35 @@
             )
 
 )
+
+
+
+
+
+; backtracking 
+; design a function that finds a name string in tree and help to find out...
+
+; String Element -> integar or false
+; intrp. take any string and find out in tree if find return data elsewhere return false
+
+;example
+;
+(check-expect (find "F1" empty) false)
+(check-expect (find "F1" F1)) 1)
+(check-expect (find "F2" D1) 2)
+
+(define (find-element n s) false)
+(define (find--list n s) false)
+
+
+;; in backtracking we must stop the recursion if we found something in it so we must flag it
+;; if we find it return it if we dont find in one branch we return false that will check it another branch
+
+
+
+
+
+
+
+
+
