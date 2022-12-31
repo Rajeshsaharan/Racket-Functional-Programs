@@ -1,3 +1,5 @@
+;; accumulator as tail recursive fumction
+
 ;; tail recursion is a method to solve computional problem of recursion
 ;; we must use an accumulator to use tail recursion
 

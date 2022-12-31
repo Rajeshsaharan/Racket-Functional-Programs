@@ -1,5 +1,5 @@
 ; making a function that consume a list with node struct and add all of them 
-
+; accumulator as tail recursive 
 ; (list (1 ,0) (2, 2) (1, 2)) --> add ---> produce number
 
 ;; here we are using fold abstract tail recursion everything

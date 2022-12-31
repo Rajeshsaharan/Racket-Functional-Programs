@@ -1,8 +1,8 @@
 ;to track the information of recursion
-
+: 
 ;; (list 1 2 3 4) -> (list 1 4 2 3)
 
-;; list-> list
+;;list-> list
 
 
 ; accumultor is very important to trace the recursion state ! important 

@@ -1,3 +1,4 @@
+;; accumulator for state/ progress record example
 ;; a best example of local + accu + recursion :::::
 
 ;; (list 1 2 3 4 5 6) ---> (list 1 6 2 3 4 5)
