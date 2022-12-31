@@ -91,3 +91,28 @@
 
 
 
+
+(define F1 (make-node "F1"  empty)) 
+(define F2 (make-node "F2"  empty))
+(define F3 (make-node "F3"  empty))
+(define D1 (make-node "D1"  (list F1 F2))) 
+(define D2 (make-node "D2"  (list F3)))
+(define R1 (make-node "R1"  (list D1 D2)))
+
+
+; making a list of all name string present in tree
+;fun-node -> will be produce list (user-defined)
+;fun-list -> program defined to combine all list
+
+
+;fun-node can be defined outside the local or can be call outside the local world
+
+(define (fun-node n lon ) (cons n lon)) ; take n and lon and produce list of (cons n lon)
+;;in node example -> ((node-name node) (fn-for-list (node-child node)) --->  (cons (node-name node) (fn-for-list (node-child node)))
+
+
+(fold-node fun-node append empty R1) ; produce list of all tree string
+
+
+
+
